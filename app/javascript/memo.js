@@ -4,12 +4,10 @@ function post (){
     e.preventDefault();
     const form = document.getElementById("form");
     const formData = new FormData(form);
-/*     新たに生成したFormDataオブジェクトを変数formDataに格納しています。
- */  
     const XHR = new XMLHttpRequest();
-    XHR.open("POST", "/post", true);
+    XHR.open("POST", "/posts", true);
     XHR.responseType = "json";
-    XHR.send(forDate);
+    XHR.send(formData);
   });
 };
 
